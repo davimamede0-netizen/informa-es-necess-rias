@@ -6,24 +6,60 @@
     <title>Document</title>
 </head>
 <style>
-    body {
+   body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #fff000, #9B9BFF);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    }
-
-    h3 {
+    background: linear-gradient(135deg, #0400ff);
+}
+    h2 {
   display: grid;
   align-content: start;
-  height: 200px;
+  height: 20px;
+  text-align: center;
 }
 
+div{
+    margin-left: 140px;
+    margin-right: 140px;
+    background: linear-gradient(135deg, #fff000, #9B9BFF);
+    border-radius: 10px;
+}
+
+select {
+  font-size: 16px;
+  width: 140px;
+}
 </style>
 <body>
-    <h3>Informações Necessárias</h3>
+    <div class="div">
+    <h2>Informações Necessárias</h2><br>
+<p>Essa página será destinada a conhecer melhor o motorista e sua atividade profissional</p>
+
+<form method="post" autocomplete="off">
+<ul>
+<li>
+    Qual aplicativo você utiliza para trabalhar?<br>
+<select id="motorista" name="motorista" required>
+   <option>Uber</option>
+   <option>99</option>
+   <option>inDrive</option>
+   <option>Lady Drive</option>
+
+</select>
+</li>
+</ul>
+
+ <input type="checkbox" name="motorista" value="outro">Outro<br>
+<textarea name="resposta" placeholder="Digite Qual é o outro" cols="30"  rows="5"></textarea><br><br>
+
+<label>Tempo de experiência</label><br>
+<input type="text" name="experiencia" placeholder="Ex:2 anos" size="29">
+
+
+
+</form>
+
+    </div>
 </body>
 </html>
