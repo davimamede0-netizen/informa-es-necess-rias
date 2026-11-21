@@ -10,7 +10,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0400ff);
+    background: linear-gradient(135deg, #ADFF2F, #00ffFF);
 }
     h2 {
   display: grid;
@@ -20,10 +20,12 @@
 }
 
 div{
-    margin-left: 140px;
-    margin-right: 140px;
-    background: linear-gradient(135deg, #fff000, #9B9BFF);
+    margin-left: 3px;
+    margin-right: 3px;
+    background: linear-gradient(135deg, #fff000, #00FFFF);
     border-radius: 10px;
+    min-height: 150px;
+    padding: 40px 20px;
 }
 
 select {
@@ -53,9 +55,25 @@ select {
  <input type="checkbox" name="motorista" value="outro">Outro<br>
 <textarea name="resposta" placeholder="Digite Qual é o outro" cols="30"  rows="5"></textarea><br><br>
 
-<label>Tempo de experiência</label><br>
-<input type="text" name="experiencia" placeholder="Ex:2 anos" size="29">
+<label>Há quanto tempo você trabalha com aplicativos?</label><br>
+<input type="text" name="experiencia" placeholder="Ex:2 anos" size="29"><br><br>
 
+<label>Qual é o modelo e o ano do seu veículo atual?</label><br>
+<input type="text" name="veiculo" placeholder="Ex: Gol 2015" size="29"><br><br>
+
+<p>Quantas horas por dia você costuma a trabalhar</p>
+<form Method="post" autocomplete="off"> 
+<label>Quantidade de horas</label><br>
+<input type="text" name="horas" placeholder="Digite a quantidade de horas" size="25" required>
+<p>Você trabalha exclusivamente com aplicativos?</p>
+<input type="radio" name="app" value="sim" required> Sim
+<input type="radio" name="app" value="nao" required> Não<br><br>
+
+<input type="text" name="nao" placeholder="Se não, qual é a sua área de atuação?" size="30" required>
+
+<p>Seu veiculo esta atualmente em manutenção ou conserto?</p>
+<input type="radio" name="app" value="sim" required> Sim
+<input type="radio" name="app" value="nao" required> Não
 
 
 </form>
