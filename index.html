@@ -1,83 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-   body {
+    <title>Informações necessárias</title>
+    <style>
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ADFF2F, #00ffFF);
-}
-    h2 {
-  display: grid;
-  align-content: start;
-  height: 20px;
-  text-align: center;
-}
+    padding: 24px 12px;
+    background: #061A38;
+    color: #fff;
+        }
 
-div{
-    margin-left: 3px;
-    margin-right: 3px;
-    background: linear-gradient(135deg, #fff000, #00FFFF);
-    border-radius: 10px;
-    min-height: 150px;
-    padding: 40px 20px;
-}
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+        }
+
+div {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px 24px;
+    background: #0f2a4a;
+    border: 1px solid #25477a;
+    border-radius: 14px;
+        }
 
 select {
-  font-size: 16px;
-  width: 140px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #0a2040;
+    border: 1px solid #25477a;
+    border-radius: 8px;
+        }
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #0a2040;
+    border: 1px solid #25477a;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
-</style>
+.opcoes {
+    display: flex;
+    gap: 12px;
+}
+.opcoes label {
+    flex: 1;
+    padding: 10px;
+    background: #0a2040;
+    border: 1px solid #25477a;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #0984e3;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+    </style>
+</head>
 <body>
-    <div class="div">
-    <h2>Informações Necessárias</h2><br>
-<p>Essa página será destinada a conhecer melhor o motorista e sua atividade profissional</p>
+    <div>
+        <h2>Informações necessárias</h2>
 
-<form method="post" autocomplete="off">
-<ul>
-<li>
-    Qual aplicativo você utiliza para trabalhar?<br>
-<select id="motorista" name="motorista" required>
-   <option>Uber</option>
-   <option>99</option>
-   <option>inDrive</option>
-   <option>Lady Drive</option>
-
+        <form method="post" autocomplete="off">
+         <p>Qual aplicativo você usa para trabalhar?</p>
+<select name="aplicativo" required>
+    <option value="">Selecione</option>
+    <option>Uber</option>
+    <option>99</option>
+    <option>inDrive</option>
+    <option>Lady Drive</option>
+    <option>Outro</option>
 </select>
-</li>
-</ul>
 
- <input type="checkbox" name="motorista" value="outro">Outro<br>
-<textarea name="resposta" placeholder="Digite Qual é o outro" cols="30"  rows="5"></textarea><br><br>
+<p>Se escolheu Outro, qual aplicativo?</p>
+<input type="text" name="aplicativo_outro" placeholder="Digite o nome do aplicativo">
 
-<label>Há quanto tempo você trabalha com aplicativos?</label><br>
-<input type="text" name="experiencia" placeholder="Ex:2 anos" size="29"><br><br>
+    <p>Há quanto tempo você trabalha com aplicativos?</p>
+    <input type="text" name="experiencia" placeholder="Ex.: 2 anos">
 
-<label>Qual é o modelo e o ano do seu veículo atual?</label><br>
-<input type="text" name="veiculo" placeholder="Ex: Gol 2015" size="29"><br><br>
+    <p>Qual é o modelo e o ano do seu veículo?</p>
+    <input type="text" name="veiculo" placeholder="Ex.: Gol 2015">
 
-<p>Quantas horas por dia você costuma a trabalhar</p>
-<form Method="post" autocomplete="off"> 
-<label>Quantidade de horas</label><br>
-<input type="text" name="horas" placeholder="Digite a quantidade de horas" size="25" required>
-<p>Você trabalha exclusivamente com aplicativos?</p>
-<input type="radio" name="app" value="sim" required> Sim
-<input type="radio" name="app" value="nao" required> Não<br><br>
+    <p>Quantas horas por dia você trabalha?</p>
+    <input type="number" name="horas" min="1" max="24" placeholder="Ex.: 8" required>
 
-<input type="text" name="nao" placeholder="Se não, qual é a sua área de atuação?" size="30" required>
+    
+    <p>Você trabalha exclusivamente com aplicativos?</p>
+    <span class="opcoes">
+    <label><input type="radio" name="exclusivo" value="sim" required> Sim</label>
+    <label><input type="radio" name="exclusivo" value="nao"> Não </label>
+    </span>
 
-<p>Seu veiculo esta atualmente em manutenção ou conserto?</p>
-<input type="radio" name="app" value="sim" required> Sim
-<input type="radio" name="app" value="nao" required> Não
+    <p>Seu veículo está em manutenção ou conserto?</p>
+    <span class="opcoes">
+    <label><input type="radio" name="manutencao" value="sim" required> Sim</label>
+    <label><input type="radio" name="manutencao" value="nao"> Não </label>
+    </span>
 
-
-</form>
-
+    <p><button type="submit">Enviar informações</button></p>
+    </form>
     </div>
 </body>
 </html>
